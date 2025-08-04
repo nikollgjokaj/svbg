@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -179,7 +179,7 @@ Mit freundlichen Grüßen
                 width={120}
                 height={40}
                 priority
-                className="h-10 w-auto"
+                className="h-8 sm:h-10 w-auto"
               />
             </motion.div>
             <motion.a
@@ -189,7 +189,7 @@ Mit freundlichen Grüßen
                 boxShadow: "0 10px 25px rgba(201, 154, 60, 0.3)"
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#c99a3c] text-[#1b1464] px-6 py-2 rounded-full font-medium hover:bg-[#b8893a] transition-colors inline-block"
+              className="bg-[#c99a3c] text-[#1b1464] px-4 py-2 sm:px-6 sm:py-2 rounded-full font-medium text-sm sm:text-base hover:bg-[#b8893a] transition-colors inline-block"
             >
               Jetzt Erstgespräch sichern
             </motion.a>
@@ -230,7 +230,7 @@ Mit freundlichen Grüßen
 
           {/* Floating Elements */}
           <motion.div
-            className="absolute top-20 left-10 w-4 h-4 bg-[#c99a3c] rounded-full opacity-30"
+            className="absolute top-20 left-4 sm:left-10 w-3 h-3 sm:w-4 sm:h-4 bg-[#c99a3c] rounded-full opacity-30"
             animate={{
               y: [0, -20, 0],
               scale: [1, 1.2, 1],
@@ -242,7 +242,7 @@ Mit freundlichen Grüßen
             }}
           />
           <motion.div
-            className="absolute top-40 right-20 w-6 h-6 bg-white/20 rounded-full"
+            className="absolute top-40 right-4 sm:right-20 w-4 h-4 sm:w-6 sm:h-6 bg-white/20 rounded-full"
             animate={{
               y: [0, 30, 0],
               x: [0, -10, 0],
@@ -282,13 +282,13 @@ Mit freundlichen Grüßen
                     alt="SVBG GmbH Logo"
                     width={250}
                     height={100}
-                    className="h-20 w-auto mx-auto mb-8 drop-shadow-2xl"
+                    className="h-12 sm:h-16 md:h-20 w-auto mx-auto mb-6 sm:mb-8 drop-shadow-2xl"
                   />
                 </motion.div>
               </motion.div>
               <motion.h1 
                 variants={fadeInUp}
-                className="text-4xl md:text-7xl font-bold text-white mb-6 font-[family-name:var(--font-heading)] drop-shadow-lg"
+                className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 font-[family-name:var(--font-heading)] drop-shadow-lg"
               >
                 <motion.span
                   whileInView={{ 
@@ -315,14 +315,14 @@ Mit freundlichen Grüßen
               </motion.h1>
               <motion.p 
                 variants={fadeInUp}
-                className="text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto drop-shadow-md"
+                className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 sm:mb-12 max-w-4xl mx-auto drop-shadow-md px-4"
               >
                 Professionelle KFZ-Vermietung und maßgeschneidertes Flottenmanagement 
                 vertrauensvoll, kompetent, exklusiv.
               </motion.p>
               <motion.div 
                 variants={fadeInUp}
-                className="flex flex-col sm:flex-row gap-6 justify-center"
+                className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4"
               >
                 <motion.a
                   href={createEmailLink('angebot')}
@@ -332,7 +332,7 @@ Mit freundlichen Grüßen
                     y: -5
                   }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-[#c99a3c] text-[#1b1464] px-10 py-4 rounded-full font-bold text-xl hover:bg-[#b8893a] transition-colors shadow-2xl inline-block text-center"
+                  className="bg-[#c99a3c] text-[#1b1464] px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-4 rounded-full font-bold text-base sm:text-lg md:text-xl hover:bg-[#b8893a] transition-colors shadow-2xl inline-block text-center"
                 >
                   <motion.span
                     whileHover={{ scale: 1.1 }}
@@ -350,7 +350,7 @@ Mit freundlichen Grüßen
                     y: -5
                   }}
                   whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white text-white bg-white/10 backdrop-blur-sm px-10 py-4 rounded-full font-bold text-xl transition-all shadow-2xl inline-block text-center"
+                  className="border-2 border-white text-white bg-white/10 backdrop-blur-sm px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-4 rounded-full font-bold text-base sm:text-lg md:text-xl transition-all shadow-2xl inline-block text-center"
                 >
                   <motion.span
                     whileHover={{ scale: 1.1 }}
@@ -374,13 +374,13 @@ Mit freundlichen Grüßen
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               whileHover={{ scale: 1.2 }}
-              className="w-6 h-10 border-2 border-white rounded-full flex justify-center cursor-pointer"
+              className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-white rounded-full flex justify-center cursor-pointer"
               onClick={() => uspRef.current?.scrollIntoView({ behavior: 'smooth' })}
             >
               <motion.div
                 animate={{ y: [0, 12, 0] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="w-1 h-3 bg-white rounded-full mt-2"
+                className="w-1 h-2 sm:h-3 bg-white rounded-full mt-1 sm:mt-2"
               />
             </motion.div>
             <motion.p 
@@ -414,7 +414,7 @@ Mit freundlichen Grüßen
               className="text-center mb-16"
             >
               <motion.h2 
-                className="text-3xl md:text-4xl font-bold text-[#1b1464] mb-4 font-[family-name:var(--font-heading)]"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1b1464] mb-4 font-[family-name:var(--font-heading)]"
                 whileInView={{
                   backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                 }}
@@ -430,7 +430,7 @@ Mit freundlichen Grüßen
                 Warum SVBG GmbH?
               </motion.h2>
               <motion.p 
-                className="text-xl text-gray-600 max-w-2xl mx-auto"
+                className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
@@ -444,7 +444,7 @@ Mit freundlichen Grüßen
               whileInView="animate"
               variants={staggerContainer}
               viewport={{ once: true, amount: 0.1 }}
-              className="grid md:grid-cols-3 gap-8"
+              className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 px-4"
             >
               {[
                 {
@@ -480,20 +480,20 @@ Mit freundlichen Grüßen
                       boxShadow: "0 10px 30px rgba(201, 154, 60, 0.3)"
                     }}
                     transition={{ duration: 0.6 }}
-                    className="w-16 h-16 bg-[#c99a3c] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#b8893a] transition-colors"
+                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#c99a3c] rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-[#b8893a] transition-colors"
                   >
-                    <svg className="w-8 h-8 text-[#1b1464]" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-[#1b1464]" fill="currentColor" viewBox="0 0 20 20">
                       <path d={item.icon}></path>
                     </svg>
                   </motion.div>
                   <motion.h3 
-                    className="text-xl font-bold text-[#1b1464] mb-4 font-[family-name:var(--font-heading)]"
+                    className="text-lg sm:text-xl font-bold text-[#1b1464] mb-3 sm:mb-4 font-[family-name:var(--font-heading)]"
                     whileHover={{ scale: 1.05 }}
                   >
                     {item.title}
                   </motion.h3>
                   <motion.p 
-                    className="text-gray-600"
+                    className="text-sm sm:text-base text-gray-600"
                     initial={{ opacity: 0.8 }}
                     whileHover={{ opacity: 1 }}
                   >
@@ -518,7 +518,7 @@ Mit freundlichen Grüßen
           />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -526,7 +526,7 @@ Mit freundlichen Grüßen
                 viewport={{ once: true, amount: 0.3 }}
               >
                 <motion.h2 
-                  className="text-3xl md:text-4xl font-bold text-[#1b1464] mb-6 font-[family-name:var(--font-heading)]"
+                  className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1b1464] mb-4 sm:mb-6 font-[family-name:var(--font-heading)]"
                   whileInView={{ 
                     textShadow: ["0 0 0px rgba(27, 20, 100, 0)", "0 0 20px rgba(27, 20, 100, 0.3)", "0 0 0px rgba(27, 20, 100, 0)"],
                   }}
@@ -536,7 +536,7 @@ Mit freundlichen Grüßen
                   Über SVBG GmbH
                 </motion.h2>
                 <motion.p 
-                  className="text-lg text-gray-600 mb-6"
+                  className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2, duration: 0.6 }}
@@ -547,7 +547,7 @@ Mit freundlichen Grüßen
                   zuverlässigen, effizienten Lösungen, die Ihren Geschäftserfolg unterstützen.
                 </motion.p>
                 <motion.p 
-                  className="text-lg text-gray-600 mb-8"
+                  className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.6 }}
@@ -566,7 +566,7 @@ Mit freundlichen Grüßen
                       y: -3
                     }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-[#c99a3c] text-[#1b1464] px-6 py-3 rounded-full font-semibold hover:bg-[#b8893a] transition-colors inline-block text-center"
+                    className="bg-[#c99a3c] text-[#1b1464] px-5 py-2.5 sm:px-6 sm:py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-[#b8893a] transition-colors inline-block text-center"
                   >
                     Mehr erfahren
                   </motion.a>
@@ -585,7 +585,7 @@ Mit freundlichen Grüßen
                 className="bg-white p-8 rounded-lg shadow-lg perspective-1000"
               >
                 <motion.h3 
-                  className="text-xl font-bold text-[#1b1464] mb-4 font-[family-name:var(--font-heading)]"
+                  className="text-lg sm:text-xl font-bold text-[#1b1464] mb-3 sm:mb-4 font-[family-name:var(--font-heading)]"
                   whileHover={{ scale: 1.05, color: "#c99a3c" }}
                 >
                   Kontaktdaten
@@ -691,7 +691,7 @@ Mit freundlichen Grüßen
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-white mb-6 font-[family-name:var(--font-heading)]"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 font-[family-name:var(--font-heading)] px-4"
               whileHover={{
                 textShadow: "0 0 30px rgba(255, 255, 255, 0.5)",
                 scale: 1.02
@@ -704,7 +704,7 @@ Mit freundlichen Grüßen
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-xl text-gray-300 mb-8"
+              className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8 px-4"
             >
               Lassen Sie uns gemeinsam die optimale Lösung für Ihren Fuhrpark entwickeln. 
               Kontaktieren Sie uns noch heute für ein unverbindliches Erstgespräch.
@@ -722,7 +722,7 @@ Mit freundlichen Grüßen
                 background: "linear-gradient(45deg, #c99a3c, #d4a950)"
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#c99a3c] text-[#1b1464] px-12 py-4 rounded-full font-bold text-xl hover:bg-[#b8893a] transition-all duration-300 inline-block"
+              className="bg-[#c99a3c] text-[#1b1464] px-6 py-3 sm:px-8 sm:py-4 md:px-12 md:py-4 rounded-full font-bold text-base sm:text-lg md:text-xl hover:bg-[#b8893a] transition-all duration-300 inline-block"
             >
               <motion.span
                 whileHover={{ scale: 1.1 }}
@@ -749,32 +749,32 @@ Mit freundlichen Grüßen
             whileInView="animate"
             variants={staggerContainer}
             viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8"
+            className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8"
           >
             <motion.div variants={fadeInUp}>
               <motion.div 
                 className="flex items-center mb-4"
                 whileHover={{ scale: 1.05 }}
               >
-                <Image
-                  src="/logo.svg"
-                  alt="SVBG GmbH Logo"
-                  width={100}
-                  height={35}
-                  className="h-8 w-auto"
-                />
+                                  <Image
+                    src="/logo.svg"
+                    alt="SVBG GmbH Logo"
+                    width={100}
+                    height={35}
+                    className="h-6 sm:h-8 w-auto"
+                  />
               </motion.div>
-              <motion.p 
-                className="text-gray-600 mb-4"
-                whileHover={{ color: "#1b1464" }}
-              >
-                Ihr vertrauensvoller Partner für Fuhrparkmanagement und KFZ-Vermietung 
-                in Wien und Umgebung.
-              </motion.p>
+                              <motion.p 
+                  className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm"
+                  whileHover={{ color: "#1b1464" }}
+                >
+                  Ihr vertrauensvoller Partner für Fuhrparkmanagement und KFZ-Vermietung 
+                  in Wien und Umgebung.
+                </motion.p>
             </motion.div>
             <motion.div variants={fadeInUp}>
               <motion.h4 
-                className="font-semibold text-[#1b1464] mb-4"
+                className="font-semibold text-[#1b1464] mb-3 sm:mb-4 text-sm sm:text-base"
                 whileHover={{ scale: 1.05, color: "#c99a3c" }}
               >
                 Kontakt
@@ -784,7 +784,7 @@ Mit freundlichen Grüßen
                   <motion.p 
                     key={index}
                     whileHover={{ x: 5, color: "#1b1464" }}
-                    className="transition-colors cursor-default"
+                    className="transition-colors cursor-default text-xs sm:text-sm"
                   >
                     {item}
                   </motion.p>
@@ -793,7 +793,7 @@ Mit freundlichen Grüßen
             </motion.div>
             <motion.div variants={fadeInUp}>
               <motion.h4 
-                className="font-semibold text-[#1b1464] mb-4"
+                className="font-semibold text-[#1b1464] mb-3 sm:mb-4 text-sm sm:text-base"
                 whileHover={{ scale: 1.05, color: "#c99a3c" }}
               >
                 Rechtliches
@@ -810,14 +810,14 @@ Mit freundlichen Grüßen
                         color: "#c99a3c",
                         scale: 1.05
                       }}
-                      className="text-gray-600 hover:text-[#c99a3c] transition-all block cursor-pointer"
+                      className="text-gray-600 hover:text-[#c99a3c] transition-all block cursor-pointer text-xs sm:text-sm"
                     >
                       {link.text}
                     </motion.span>
                   </Link>
                 ))}
                 <motion.p 
-                  className="text-gray-600 text-sm"
+                  className="text-gray-600 text-xs sm:text-sm"
                   whileHover={{ scale: 1.05 }}
                 >
                   FN 658905 d
@@ -832,11 +832,11 @@ Mit freundlichen Grüßen
             viewport={{ once: true }}
             className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600"
           >
-            <motion.p whileHover={{ scale: 1.02 }}>
+            <motion.p className="text-xs sm:text-sm" whileHover={{ scale: 1.02 }}>
               &copy; 2024 SVBG GmbH. Alle Rechte vorbehalten.
             </motion.p>
             <motion.p 
-              className="text-sm mt-2"
+              className="text-xs sm:text-sm mt-2"
               whileHover={{ scale: 1.02 }}
             >
               Powered by{" "}
