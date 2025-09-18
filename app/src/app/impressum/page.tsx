@@ -80,9 +80,10 @@ export default function Impressum() {
                   <p className="mb-2">2442 Unterwaltersdorf</p>
                   <p className="mb-2">Österreich</p>
                   <p className="mb-2"><strong>E-Mail:</strong> office@svbg.at</p>
-                  <p className="mb-2"><strong>Firmenbuchnummer:</strong> FN 658905 d</p>
-                  <p className="mb-2"><strong>Firmenbuchgericht:</strong> Handelsgericht Wien</p>
-                  <p className="mb-2"><strong>UID-Nummer:</strong> ATU [Wird ergänzt]</p>
+                  <p className="mb-2"><strong>Firmenbuchnummer:</strong>FN 658905 d</p>
+                  <p className="mb-2"><strong>Firmenbuchgericht:</strong> Handelsgericht Wiener Neustadt</p>
+                  <p className="mb-2"><strong>UID-Nummer:</strong>ATU82480879</p>
+                  <p className="mb-2"><strong>Steuer-ID-Nummer:</strong>164106478</p>
                 </div>
               </motion.section>
 
