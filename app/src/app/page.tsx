@@ -189,9 +189,10 @@ Mit freundlichen Grüßen
                 boxShadow: "0 10px 25px rgba(201, 154, 60, 0.3)"
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#c99a3c] text-[#1b1464] px-4 py-2 sm:px-6 sm:py-2 rounded-full font-medium text-sm sm:text-base hover:bg-[#b8893a] transition-colors inline-block"
+              className="bg-[#c99a3c] text-[#1b1464] px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2 rounded-full font-medium text-xs sm:text-sm md:text-base hover:bg-[#b8893a] transition-colors inline-block"
             >
-              Jetzt Erstgespräch sichern
+              <span className="block sm:hidden">Erstgespräch</span>
+              <span className="hidden sm:block">Jetzt Erstgespräch sichern</span>
             </motion.a>
           </div>
         </div>
@@ -199,7 +200,7 @@ Mit freundlichen Grüßen
 
       <main>
         {/* Hero Section with Background Video */}
-        <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden">
+        <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden px-4 sm:px-0">
           {/* Background Video with Parallax */}
           <motion.div 
             className="absolute inset-0 w-full h-full"
@@ -394,14 +395,14 @@ Mit freundlichen Grüßen
         </section>
 
         {/* USP Section with Advanced Animations */}
-        <section ref={uspRef} className="py-20 bg-white relative overflow-hidden">
+        <section ref={uspRef} className="py-12 sm:py-16 md:py-20 bg-white relative overflow-hidden">
           {/* Background Elements */}
           <motion.div 
-            className="absolute top-0 right-0 w-64 h-64 bg-[#f8f8f8] rounded-full -translate-y-32 translate-x-32 opacity-50"
+            className="absolute top-0 right-0 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-[#f8f8f8] rounded-full -translate-y-16 translate-x-16 sm:-translate-y-24 sm:translate-x-24 md:-translate-y-32 md:translate-x-32 opacity-50"
             style={{ y: y3 }}
           />
           <motion.div 
-            className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-br from-[#c99a3c]/10 to-transparent rounded-full translate-y-24 -translate-x-24"
+            className="absolute bottom-0 left-0 w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 bg-gradient-to-br from-[#c99a3c]/10 to-transparent rounded-full translate-y-12 -translate-x-12 sm:translate-y-18 sm:-translate-x-18 md:translate-y-24 md:-translate-x-24"
             style={{ y: y2 }}
           />
 
@@ -506,14 +507,14 @@ Mit freundlichen Grüßen
         </section>
 
         {/* About Section with Parallax */}
-        <section ref={aboutRef} className="py-20 bg-[#f8f8f8] relative overflow-hidden">
+        <section ref={aboutRef} className="py-12 sm:py-16 md:py-20 bg-[#f8f8f8] relative overflow-hidden">
           {/* Parallax Background Elements */}
           <motion.div 
-            className="absolute top-20 left-20 w-32 h-32 bg-[#c99a3c]/10 rounded-full"
+            className="absolute top-10 left-4 sm:top-20 sm:left-20 w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-[#c99a3c]/10 rounded-full"
             style={{ y: y1, rotate: scrollY }}
           />
           <motion.div 
-            className="absolute bottom-20 right-20 w-24 h-24 bg-[#1b1464]/10 rounded-full"
+            className="absolute bottom-10 right-4 sm:bottom-20 sm:right-20 w-12 h-12 sm:w-18 sm:h-18 md:w-24 md:h-24 bg-[#1b1464]/10 rounded-full"
             style={{ y: y3, rotate: scrollY }}
           />
 
@@ -641,7 +642,7 @@ Mit freundlichen Grüßen
               scale: { duration: 4, repeat: Infinity, ease: "easeInOut" },
               opacity: { duration: 3, repeat: Infinity, ease: "easeInOut" }
             }}
-            className="absolute top-10 right-10 w-32 h-32 bg-[#c99a3c] rounded-full"
+            className="absolute top-4 right-4 sm:top-10 sm:right-10 w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-[#c99a3c] rounded-full"
           />
           <motion.div 
             animate={{ 
@@ -654,7 +655,7 @@ Mit freundlichen Grüßen
               scale: { duration: 6, repeat: Infinity, ease: "easeInOut" },
               opacity: { duration: 4, repeat: Infinity, ease: "easeInOut" }
             }}
-            className="absolute bottom-10 left-10 w-24 h-24 bg-[#c99a3c] rounded-full"
+            className="absolute bottom-4 left-4 sm:bottom-10 sm:left-10 w-12 h-12 sm:w-18 sm:h-18 md:w-24 md:h-24 bg-[#c99a3c] rounded-full"
           />
           
           {/* Additional floating elements */}
